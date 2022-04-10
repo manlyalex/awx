@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: touch file
+      file:
+        path: /tmp/foo.txt
+        state: touch
+        mode: '0644'
